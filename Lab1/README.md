@@ -99,7 +99,7 @@ print(f'BitLocker recovery key: {recovery_key[0]}')
 
 ### Probijanje lozinke - [Hashcat](https://hashcat.net/hashcat/)
 
-Skinite verziju alata [Hashcat](https://hashcat.net/files/hashcat-6.1.1.7z) te ga raspakirajte. U nastavku ćemo koristiti naredbu za probijanje BitLocker lozinke korištenjem `Hashcat` alata iz Terminala/CMDa:
+Skinite verziju alata [Hashcat](https://hashcat.net/files/hashcat-6.2.6.7z) te ga raspakirajte. U nastavku ćemo koristiti naredbu za probijanje BitLocker lozinke korištenjem `Hashcat` alata iz Terminala/CMDa:
 
 ```python
 hashcat -m 22100 -a 3 hash.txt "xyz?d?d?d?d?d"
