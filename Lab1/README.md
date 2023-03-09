@@ -4,7 +4,11 @@ Kako bi zaštitili laptope, vanjske diskove, USB memorije od posljedica krađe, 
 
 **ZADATAK:** Pretpostavite da ste dobili na analizu USB memoriju čiji je sadržaj enkriptiran korištenjem BitLockera. Nakon što ste napravili sigurnosnu kopiju USB memorije, vaš zadatak je saznati lozinku kojom je enkriptiran disk/USB.
 
-## Izračun Hash vrijednosti kopije USB-a
+## Postupak probijanja Bitlocker lozinke
+
+Probijanje lozinke se sastoji od dva dijela: izvlačenje hash sadržaja iz sigurnosne kopije UBS-a koji je zaštićen lozinkom te stvarnog napada. Sačuvajte na računalu sliku USB-a koji se nalazi na [OneDrive-u](https://fesb-my.sharepoint.com/:u:/g/personal/toperkov_fesb_hr/ERP3tpm9FRRIkk82lCHbQpIBGu-9efbxohQv6dZ6g2B2AQ?e=vmHmwi).
+
+### Izračun Hash vrijednosti kopije USB-a
 
 Vaš zadatak je provjeriti odgovara li SHA1 hash vrijednost kopije USB-a onoj koju Vam je dao profesor.
 
@@ -27,9 +31,7 @@ else:
     print('Error: bitstream image verification failed')
 ```
 
-## Postupak probijanja Bitlocker lozinke
 
-Probijanje lozinke se sastoji od dva dijela: izvlačenje hash sadržaja iz sigurnosne kopije UBS-a koji je zaštićen lozinkom te stvarnog napada. Sačuvajte na računalu sliku USB-a koji se nalazi na [OneDrive-u](https://fesb-my.sharepoint.com/:u:/g/personal/toperkov_fesb_hr/ERP3tpm9FRRIkk82lCHbQpIBGu-9efbxohQv6dZ6g2B2AQ?e=vmHmwi).
 
 ### Izvlačenje hash vrijednosti - [John the Ripper](https://www.openwall.com/john/)
 
