@@ -114,7 +114,7 @@ pip3 intall hashcat
 Nakon toga ažurirajte python skriptu da biste realizirali napad:
 
 ```python
-hashcat_cmd = f'hashcat -m 22100 -a 3 {matching[0]} "xyz?d?d?d?d?d"'
+hashcat_cmd = f'hashcat -m 22100 -a 3 {recovery_key[0]} "xyz?d?d?d?d?d"'
 process = subprocess.call(hashcat_cmd, shell=True)
 output, error = process.communicate()
 
