@@ -41,7 +41,7 @@ Na računalu sačuvajte sigurnosnu kopiju [USB-a](www.fesb.hr) koji je enkriptir
 bitlocker2john -i imageEncrypted
 Opening file /path/to/imageEncrypted
 ```
-gdje je `imageEncrypted` sigurnosna kopija USB memorije. Trebali bi dobiti nešto slično u nastavku:
+gdje je `imageEncrypted` sigurnosna kopija USB memorije (`imageFESB.001`). Trebali bi dobiti nešto slično u nastavku:
 
 ```python
 Signature found at 0x00010003
