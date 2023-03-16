@@ -118,7 +118,6 @@ Nakon toga ažurirajte python skriptu da biste realizirali napad:
 ```python
 hashcat_cmd = f'hashcat -m 22100 -a 3 {recovery_key[0]} "xyz?d?d?d?d?d"'
 process = subprocess.call(hashcat_cmd, shell=True)
-output, error = process.communicate()
 
 cracked_password = subprocess.check_output([hashcat_cmd + " --show"], shell=True).decode()
 cracked_password = cracked_password.split(':')[-1]
