@@ -8,7 +8,7 @@ Cilj ove vježbe je razumijeti da datoteke imaju jedinstvena zaglavlja na osnovu
 
 - Iz direktorija [Download](Download) sačuvajte datoteku Lab2_download_1.zip te je raspakirajte.
 
-- Vaš zadatak je saznati izlistati sve datoteke koje se nalaze u direktoriju i sačuvati ih u pandas dataframeu. Da biste to napravili pratite upute kako je navedeno:
+- Vaš zadatak je saznati i izlistati sve datoteke koje se nalaze u direktoriju i sačuvati ih u pandas dataframeu. Da biste to napravili pratite upute kako je navedeno:
 
 1. Prvo specificirate putanju direktorija gdje se datoteke nalaze koristeći varijablu `dir_path`. Zatim stvorite praznu listu `file_names` za pohranjivanje naziva datoteka.
 
@@ -52,7 +52,7 @@ Cilj ove vježbe je sačuvati i ekstenziju datoteke u pandas dataframeu. Da bism
 
 2. Zatim, za svaku datoteku, razdvajamo naziv datoteke na dva dijela: naziv i ekstenziju, koristeći funkciju `os.path.splitext()`. Ova funkcija vraća tuple koji sadrži naziv datoteke bez ekstenzije (ime) i samu ekstenziju (ekstenzija).
 
-3. Zatim dodajemo ime i ekstenziju njihovim odgovarajućim listama. Konačno, stvaramo Pandas okvir podataka s dvije kolone, `'file\_name'` i `'extension'`, koristeći funkciju `pd.DataFrame()` s rječnikom gdje su ključevi nazivi stupaca ('file\_name' i 'extension'), a vrijednosti su liste `file_names` i `extensions`, redom.
+3. Zatim dodajemo ime i ekstenziju njihovim odgovarajućim listama. Konačno, stvaramo Pandas okvir podataka s dvije kolone, `'file_name'` i `'extension'`, koristeći funkciju `pd.DataFrame()` s rječnikom gdje su ključevi nazivi stupaca ('file\_name' i 'extension'), a vrijednosti su liste `'file_names'` i `'extensions'`, redom.
 
 Cilj ove vježbe je pokazati kako dvije datoteke kreirane u na različitim uređajima imaju iste hash otiske ukoliko je njihov sadržaj identičan. Također ćemo pokazati iako je sadržaj datoteke identičan (razlikuje se po kapitalizaciji) hash otisak će u tom slučaju biti isti.
 
@@ -89,7 +89,6 @@ U ovom dijelu vježbe, ideja je provjeriti odgovara li vrsta datoteke njenoj eks
 2. Zatim, za svaku datoteku, provjeravamo sadrži li magicni broj ekstenziju datoteke koristeći operator `in` sa `lower()` metodom kako bi usporedili ekstenziju i magicni broj u malim slovima. Dodajemo vrijednost True ili False u listu `extension_matches`.
 
 ```python
-
 # check if the magic number contains the file extension
 if extension.lower() == '':
     extension_matches.append(False)
