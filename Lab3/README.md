@@ -36,6 +36,7 @@ with open(log_path, "r") as log_file:
      for line in log_file:
      # Find all USB device installation events and extract information about each device
 ```
+Napomena: za čitanje sljedeće linije u kodu koristite `next(log_file)` naredbu.
 
 Upotrijebite sljedeći regularni izraz da nađete sve USB uređaje - možete koristiti `re.match` finkciju:
 
