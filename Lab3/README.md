@@ -36,7 +36,6 @@ with open(log_path, "r") as log_file:
      for line in log_file:
      # Find all USB device installation events and extract information about each device
 ```
-Napomena: za čitanje sljedeće linije u kodu koristite `next(log_file)` naredbu.
 
 Upotrijebite sljedeći regularni izraz da nađete sve USB uređaje - možete koristiti `re.match` finkciju:
 
@@ -44,8 +43,11 @@ Upotrijebite sljedeći regularni izraz da nađete sve USB uređaje - možete kor
 r'^>>>  \[Device Install.*#(Disk&Ven_[A-Za-z0-9]+)&(Prod_([\w\s\S]+?))&(Rev_([\w\s\S]+?))#([\w\s\S]+?)#.*\]'
 ```
 
-Nakon toga, pohranite informaciju u rječnik - 
-`usb_devices = {}`. U rječnik pohranite informaciju o tome koji je `device_vendor_id`, `device_product_id`, `device_instance_id` te `event_time`. Uzmite u obzir da USB uređaj može biti više puta ubačen u računalo.
+Nakon toga, pohranite informaciju u rječnik 
+`usb_devices = {}`. U rječnik pohranite informaciju o tome koji je `device_vendor_id`, `device_product_id`, `device_instance_id`, `serial_number` te `event_time`. Uzmite u obzir da USB uređaj može biti više puta ubačen u računalo.
+
+Napomena: za čitanje sljedeće linije u kodu koristite `next(log_file)` naredbu. Ovo će vam pomoći za `event_time` vrijeme kada je USB bio spojen na računalo.
+
 
 ## Zadatak 2
 
