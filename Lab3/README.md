@@ -8,7 +8,7 @@ Međutim, saznalo se da je profesor pripremio kolokvij te ga drži spremljenog n
 
 Zadatak forenzičara je saznati je li u trenutku neopreznosti bio spojen USB memorijski ključ spojen na računalo na kojeg je mogao biti kopiran kolokvij.
 
-Operacijski sustav Windows 10 sadrži interni log u koji sprema listu (USB) uređaja koji su prvi put bili povezani na računalo. Ime datoteke je `setupapi.dev.log` koja se nalazi u direktoriju `\Windows\inf\`. Iz direktorija [Download](Download) sačuvajte datoteku `setupapi.dev.log` koju je forenzičar pripremio za vas.
+Operacijski sustav Windows 10 sadrži interni log u koji sprema listu (USB) uređaja koji su prvi put bili povezani na računalo. Ime datoteke je `setupapi.dev2.log` koja se nalazi u direktoriju `\Windows\inf\`. Iz direktorija [Download](Download) sačuvajte datoteku `setupapi.dev.log` koju je forenzičar pripremio za vas.
 
 Vaš zadatak je napraviti skriptu u pythonu koja parsira navedenu log datoteku te ispisuje sve USB uređaje koji su bili prvi put povezani na računalo kao i vrijeme u kojem su se prvi put povezali na računalo. Na slici ispod možete vidjeti koji su parametri jedinstveno identificiraju uređaj. 
 
