@@ -53,4 +53,4 @@ Nakon toga, sa [OneDrive-a](https://fesb-my.sharepoint.com/:u:/g/personal/toperk
 
 Nastavno na nju, ažurirajte kod tako da računa i vrijeme kada je datoteka nastala, kada je izmjenjena te kada joj se pristupilo. U gornjem kodu prvo stvorite tri prazne liste `creation_times`, `modification_times` i `access_times` za pohranjivanje vremenskih oznaka metapodataka datoteke. Zatim, za svaku datoteku izdvajamo vrijeme stvaranja, vrijeme izmjene i vrijeme pristupa pomoću funkcija `os.path.getctime()`, `os.path.getmtime()` i `os.path.getatime()`. Svaku vremensku oznaku pretvaramo u format čitljiv ljudima pomoću funkcije `time.ctime()` i dodajemo ih na odgovarajuće popise.
 
-Usporedite vremena kada je zadnji put neki USB ubačen u računalo u `setupapi.dev.log` datoteci sa vremenom kada je neka datoteka prebačena na USB.
+Usporedite vremena kada je zadnji put neki USB ubačen u računalo u `setupapi.dev.log` datoteci sa vremenom kada je neka datoteka prebačena na USB te zaključite o kojem se USB-u radi.
