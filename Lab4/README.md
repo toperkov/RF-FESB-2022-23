@@ -14,7 +14,7 @@ Za realizaciju vježbe koristite python programsko okruženje te ekstendirajte k
 import os, sys, optparse
 from exif import Image
 import webbrowser
-from PyPDF2 import PdfFileReader, PdfFileWriter
+from pypdf import PdfReader, PdfWriter
 
 def convertGPScoordinate(coordinate, coordinate_ref):
     decimal_degrees = coordinate[0] + \
@@ -38,20 +38,15 @@ def figMetaData(file_path):
 
 
 def pdfMetaData(file_path):
-    pdf_doc = PdfFileReader(open(path, "rb"))
-    if pdf_doc.isEncrypted:
-        try:
-            if pdf_doc.decrypt("PASSWORD_GOES_HERE") != 1:
-                sys.exit("target pdf document is encrypted")
-        except:
-            sys.exit("target pdf document is encrypted")
+    pdf_doc = PdfReader(open(path, "rb"))
+    if pdf_doc.is_encrypted:
+        pdf_doc.decrypt("PASSWORD_GOES_HERE")
 
-    pdfWriter = PdfFileWriter()
-    for pageNum in range(pdf_doc.numPages):
-        pdfWriter.addPage(pdf_doc.getPage(pageNum))
-    resultPdf = open('decrypted_output.pdf', 'wb')
-    pdfWriter.write(resultPdf)
-    resultPdf.close()
+    pdfWriter = PdfWriter()
+    for pageNum in pdf_doc.pages:
+        pdfWriter.add_page(pageNum)
+    with open('decrypted_output.pdf', 'wb') as f:
+        pdfWriter.write(f)
 
 
 if __name__ == "__main__":
